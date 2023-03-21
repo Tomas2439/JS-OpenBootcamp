@@ -1,8 +1,8 @@
 {
-    "name": "name",
+    "name": "tomas2439",
     "description": "description",
     "authors": "author",
     "version": "1.0.0",
-    "main": "index.html",
+    "main": "index",
     "dependencies": {}
 }
