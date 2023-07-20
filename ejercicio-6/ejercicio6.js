@@ -1,36 +1,36 @@
-/*
-Crea un archivo JS que contenga las siguientes líneas
 
-- Una variable que contenga la lista de la compra (mínimo 5 elementos) *
+// Declaración de la variable listaCompra con 5 elementos
+let listaCompra = ["Manzanas", "Arroz", "Leche", "Pan", "Queso"];
 
-- Modifica la lista de la compra y añádele "Aceite de Girasol"
+// Añadir "Aceite de Girasol" a la lista de la compra
+listaCompra.push("Aceite de Girasol");
 
-- Vuelve a modificar la lista de la compra eliminando "Aceite de Girasol"
+// Eliminar "Aceite de Girasol" de la lista de la compra
+listaCompra.splice(listaCompra.indexOf("Aceite de Girasol"), 1);
 
-- Una lista de tus 3 películas favoritas (objetos con propiedades: titulo, director, fecha)
+// Declaración de la lista de películas favoritas
+let peliculasFavoritas = [
+  { titulo: "Pelicula1", director: "Director1", fecha: "2012-05-15" },
+  { titulo: "Pelicula2", director: "Director2", fecha: "2010-11-21" },
+  { titulo: "Pelicula3", director: "Director3", fecha: "2015-09-08" }
+];
 
-- Una nueva lista que contenga las películas posteriores al 1 de enero de 2010 (utilizando filter)
+// Filtrar las películas posteriores al 1 de enero de 2010
+let peliculasPosteriores = peliculasFavoritas.filter(
+  (pelicula) => pelicula.fecha > "2010-01-01"
+);
 
-- Una nueva lista que contenga los directores de la lista de películas original (utilizando map)
+// Obtener una lista de directores de la lista original de películas
+let directores = peliculasFavoritas.map((pelicula) => pelicula.director);
 
-- Una nueva lista que contenga los títulos de la lista de películas original (utilizando map)
+// Obtener una lista de títulos de la lista original de películas
+let titulos = peliculasFavoritas.map((pelicula) => pelicula.titulo);
 
-- Una nueva lista que concatene la lista de directores y la lista de los títulos (utilizando concat)
+// Concatenar la lista de directores y la lista de títulos
+let directoresTitulos = directores.concat(titulos);
 
-- Una nueva lista que concatene la lista de directores y la lista de los títulos (utilizando el factor de propagación)
-*/
-let listaDeCompras = [
-    'Huevo',
-    'Papa',
-    'Zanahoria',
-    'Coca Cola',
-    'Chicharron Prensado'
-]
-console.log(listaDeCompras)
-
-listaDeCompras.push('Aceite de Girasol');
-
-console.log(listaDeCompras)
+// Concatenar la lista de directores y la lista de títulos utilizando el spread operator
+let directoresTitulosSpread = [...directores, ...titulos];
 
 
 
